@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sakagura",
+    "name": "Sakagura",
+    "countryCode": "JP",
+    "cuisine": "Japanese",
+    "neighborhood": "Liberdade",
+    "address": "R. Tomas Gonzaga, 105 - Liberdade, São Paulo",
+    "notes": "Izakaya-style, good sake list.",
+    "tags": ["izakaya"]
+  },
+  {
+    "id": "santo-gourmet",
+    "name": "Santo Grão",
+    "countryCode": "BR",
+    "cuisine": "Brazilian",
+    "neighborhood": "Jardins",
+    "address": "R. Oscar Freire, 413 - Jardins, São Paulo",
+    "notes": "Placeholder entry, replace with a real curated pick.",
+    "tags": []
+  },
+  {
+    "id": "trattoria-placeholder",
+    "name": "Trattoria Placeholder",
+    "countryCode": "IT",
+    "cuisine": "Italian",
+    "neighborhood": "Bela Vista",
+    "address": "TBD",
+    "notes": "Placeholder entry, replace with a real curated pick.",
+    "tags": []
+  }
+]
