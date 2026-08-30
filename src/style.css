@@ -1,6 +1,15 @@
 * { box-sizing: border-box; }
-body { margin: 0; font-family: system-ui, sans-serif; color: #222; }
-header { position: relative; padding: 1rem 1.5rem; border-bottom: 1px solid #ddd; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+}
+header { flex: 0 0 auto; position: relative; padding: 1rem 1.5rem; border-bottom: 1px solid #ddd; }
 header h1 { margin: 0 0 0.25rem; font-size: 1.4rem; }
 header p { margin: 0; color: #666; font-size: 0.9rem; }
 
@@ -15,10 +24,11 @@ header p { margin: 0; color: #666; font-size: 0.9rem; }
 }
 #lang-switcher button.active { background: #2a6f4b; color: #fff; border-color: #2a6f4b; }
 
-#layout { display: flex; height: calc(100vh - 80px); height: calc(100dvh - 80px); }
+#layout { display: flex; flex: 1 1 auto; min-height: 0; }
 #map { flex: 1; min-width: 0; overflow: hidden; background: #cfe8f3; }
 #panel {
   width: 320px;
+  flex-shrink: 0;
   padding: 1rem;
   overflow-y: auto;
   border-left: 1px solid #ddd;
@@ -40,9 +50,9 @@ header p { margin: 0; color: #666; font-size: 0.9rem; }
 .restaurant-card .notes { font-size: 0.85rem; margin: 0; }
 
 @media (max-width: 700px) {
-  #layout { flex-direction: column; height: auto; }
-  #map { height: 60vh; height: 60dvh; }
-  #panel { width: 100%; max-height: 35vh; max-height: 35dvh; border-left: none; border-top: 1px solid #ddd; }
+  #layout { flex-direction: column; }
+  #map { flex: 0 0 68%; }
+  #panel { flex: 1 1 auto; min-height: 0; width: 100%; border-left: none; border-top: 1px solid #ddd; }
 
   #lang-switcher { position: static; margin-top: 0.5rem; }
 }
