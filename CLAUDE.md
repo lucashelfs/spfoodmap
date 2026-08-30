@@ -4,7 +4,7 @@ Project: interactive world map, click a country → see curated São Paulo resta
 
 ## Stack (deliberate, keep it this way until there's a real reason not to)
 
-- Plain HTML/CSS/JS in `src/`, no framework, no bundler, no npm. Target deploy is GitHub Pages.
+- Plain HTML/CSS/JS in `src/`, no framework, no bundler, no npm. Deployed on GitHub Pages at https://lucashelfs.github.io/spfoodmap/ (also https://helfs.me/spfoodmap/) — separate repo from the `lucashelfs.github.io` user-site repo, see `docs/SPEC.md` for the deploy setup.
 - D3.js (v7, `d3-geo` + `d3-selection`) loaded from CDN with SRI hash (`src/index.html`) — draws the world map as SVG paths from the GeoJSON, no basemap tiles. Chosen over Leaflet: no tile server/API-key dependency, pure SVG fits a static GH Pages deploy.
 - Data loaded client-side via `d3.json()` (also plain `fetch()` under the hood) from static files in `data/`, using relative paths (`../data/...`) so it works regardless of server root or GH Pages subpath.
 - Run locally with `uv run python -m http.server` from the repo root — `file://` won't work because loading local JSON is blocked. `pyproject.toml` has zero dependencies (stdlib `http.server` is enough); don't add deps unless the project actually needs a Python package.
@@ -16,7 +16,7 @@ Don't introduce React/Vite/webpack/etc. for this project unless the scope genuin
 - `data/restaurants.json` — the curated restaurant list. Schema in `docs/DATA_SCHEMA.md`.
 - `data/countries-110m.geojson` — world country borders, trimmed to four properties per feature: `name` (English), `name_pt`, `name_es`, `iso_a2` (ISO 3166-1 alpha-2, from Natural Earth's `ISO_A2_EH` field — see Conventions). Source: Natural Earth 110m via nvkelso/natural-earth-vector, public domain.
 - `docs/COUNTRIES.md` — generated reference table of every valid `countryCode`. Regenerate from `countries-110m.geojson` if that file changes.
-- `src/app.js` — loads both JSON files, renders the D3 SVG map, highlights countries present in `restaurants.json`, click handler renders the side panel, handles PT/EN/ES language switching (`STRINGS`, `setLang()`).
+- `src/app.js` — loads both JSON files, renders the D3 SVG map, highlights countries present in `restaurants.json`, click handler highlights the clicked country's border and renders the side panel, handles PT/EN/ES language switching (`STRINGS`, `setLang()`), preserves pan/zoom across window resize.
 - `src/index.html` / `src/style.css` — page shell + styling.
 
 ## Conventions
