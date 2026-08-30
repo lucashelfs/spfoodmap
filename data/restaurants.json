@@ -6,7 +6,11 @@
     "cuisine": "Japanese",
     "neighborhood": "Liberdade",
     "address": "R. Tomas Gonzaga, 105 - Liberdade, São Paulo",
-    "notes": "Izakaya-style, good sake list.",
+    "notes": {
+      "en": "Izakaya-style, good sake list.",
+      "pt": "Estilo izakaya, boa carta de sakês.",
+      "es": "Estilo izakaya, buena carta de sake."
+    },
     "tags": ["izakaya"]
   },
   {
@@ -16,7 +20,11 @@
     "cuisine": "Brazilian",
     "neighborhood": "Jardins",
     "address": "R. Oscar Freire, 413 - Jardins, São Paulo",
-    "notes": "Placeholder entry, replace with a real curated pick.",
+    "notes": {
+      "en": "Placeholder entry, replace with a real curated pick.",
+      "pt": "Entrada de exemplo, substituir por uma recomendação real.",
+      "es": "Entrada de ejemplo, reemplazar por una recomendación real."
+    },
     "tags": []
   },
   {
@@ -26,7 +34,11 @@
     "cuisine": "Italian",
     "neighborhood": "Bela Vista",
     "address": "TBD",
-    "notes": "Placeholder entry, replace with a real curated pick.",
+    "notes": {
+      "en": "Placeholder entry, replace with a real curated pick.",
+      "pt": "Entrada de exemplo, substituir por uma recomendação real.",
+      "es": "Entrada de ejemplo, reemplazar por una recomendación real."
+    },
     "tags": []
   }
 ]
