@@ -45,29 +45,33 @@ async function main() {
     return acc;
   }, {});
 
-  const width = mapEl.clientWidth;
-  const height = mapEl.clientHeight;
-
-  const projection = d3.geoNaturalEarth1().fitSize([width, height], countries);
+  const projection = d3.geoNaturalEarth1();
   const path = d3.geoPath(projection);
 
-  const svg = d3
-    .select("#map")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
+  const svg = d3.select("#map").append("svg");
   const g = svg.append("g").attr("stroke-width", 0.5);
 
-  svg.call(
-    d3
-      .zoom()
-      .scaleExtent([1, 8])
-      .on("zoom", (event) => {
-        g.attr("transform", event.transform);
-        g.attr("stroke-width", 0.5 / event.transform.k);
-      })
-  );
+  const zoom = d3
+    .zoom()
+    .scaleExtent([1, 8])
+    .on("zoom", (event) => {
+      g.attr("transform", event.transform);
+      g.attr("stroke-width", 0.5 / event.transform.k);
+    });
+
+  svg.call(zoom);
+
+  function resize() {
+    const width = mapEl.clientWidth;
+    const height = mapEl.clientHeight;
+    svg.attr("width", width).attr("height", height);
+    projection.fitSize([width, height], countries);
+    g.selectAll("path").attr("d", path);
+    svg.call(zoom.transform, d3.zoomIdentity);
+  }
+
+  window.addEventListener("resize", resize);
+  resize();
 
   g.selectAll("path")
     .data(countries.features)
