@@ -61,17 +61,21 @@ async function main() {
 
   svg.call(zoom);
 
-  function resize() {
+  function fit() {
     const width = mapEl.clientWidth;
     const height = mapEl.clientHeight;
     svg.attr("width", width).attr("height", height);
     projection.fitSize([width, height], countries);
     g.selectAll("path").attr("d", path);
-    svg.call(zoom.transform, d3.zoomIdentity);
   }
 
-  window.addEventListener("resize", resize);
-  resize();
+  fit();
+
+  // Only grow/shrink the viewport on resize — keep the current pan/zoom in place,
+  // don't re-fit the projection (that's what made the map jump/reset).
+  window.addEventListener("resize", () => {
+    svg.attr("width", mapEl.clientWidth).attr("height", mapEl.clientHeight);
+  });
 
   g.selectAll("path")
     .data(countries.features)
