@@ -21,6 +21,7 @@ Don't introduce React/Vite/webpack/etc. for this project unless the scope genuin
 ## Conventions
 
 - Commits: no "Co-Authored-By: Claude" line, no Claude signing.
+- Commits follow [Conventional Commits](https://www.conventionalcommits.org/): `<type>[optional scope]: <description>`. Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`. Breaking change: `!` after type/scope (`feat!: ...`) or a `BREAKING CHANGE:` footer.
 - `restaurants.json` entries' `countryCode` must be a valid ISO alpha-2 code matching a feature's `iso_a2` in `countries-110m.geojson`. If you add a restaurant for a country that isn't highlighting, check the code matches exactly (case-sensitive, uppercase).
 - Keep `countries-110m.geojson` trimmed — only `name` and `iso_a2` properties. If you regenerate/replace this file, re-strip it the same way (see git history of `docs/DATA_SCHEMA.md` for the trimming approach) to keep it small.
 - No secrets, no API keys — this project has none yet, keep it that way for as long as possible (v1 is fully static/local).
