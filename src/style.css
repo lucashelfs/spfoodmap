@@ -27,3 +27,9 @@ header p { margin: 0; color: #666; font-size: 0.9rem; }
 .restaurant-card h3 { margin: 0 0 0.2rem; font-size: 1rem; }
 .restaurant-card .meta { font-size: 0.8rem; color: #666; margin: 0 0 0.3rem; }
 .restaurant-card .notes { font-size: 0.85rem; margin: 0; }
+
+@media (max-width: 700px) {
+  #layout { flex-direction: column; height: auto; }
+  #map { height: 60vh; }
+  #panel { width: 100%; max-height: 35vh; border-left: none; border-top: 1px solid #ddd; }
+}
