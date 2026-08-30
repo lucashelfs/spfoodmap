@@ -13,7 +13,7 @@ Don't introduce React/Vite/webpack/etc. for this project unless the scope genuin
 
 ## Files
 
-- `data/restaurants.json` — the curated restaurant list. Schema in `docs/DATA_SCHEMA.md`.
+- `data/restaurants.json` — the curated restaurant list. Schema in `docs/DATA_SCHEMA.md`. Use the `add-restaurant` skill (`.claude/skills/add-restaurant/`) to add an entry from a prose description instead of hand-editing the JSON.
 - `data/countries-110m.geojson` — world country borders, trimmed to four properties per feature: `name` (English), `name_pt`, `name_es`, `iso_a2` (ISO 3166-1 alpha-2, from Natural Earth's `ISO_A2_EH` field — see Conventions). Source: Natural Earth 110m via nvkelso/natural-earth-vector, public domain.
 - `docs/COUNTRIES.md` — generated reference table of every valid `countryCode`. Regenerate from `countries-110m.geojson` if that file changes.
 - `src/app.js` — loads both JSON files, renders the D3 SVG map, highlights countries present in `restaurants.json`, click handler highlights the clicked country's border and renders the side panel, handles PT/EN/ES language switching (`STRINGS`, `setLang()`), preserves pan/zoom across window resize.
