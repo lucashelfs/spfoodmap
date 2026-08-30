@@ -40,5 +40,19 @@
       "es": "Entrada de ejemplo, reemplazar por una recomendación real."
     },
     "tags": []
+  },
+  {
+    "id": "metzi",
+    "name": "Metzi",
+    "countryCode": "MX",
+    "cuisine": "Mexican",
+    "neighborhood": "Pinheiros",
+    "address": "R. João Moura, 861 - Pinheiros, São Paulo - SP, 05412-002",
+    "notes": {
+      "en": "Contemporary cuisine exploring the dialogue between Mexico and Brazil through technique, territory, and product.",
+      "pt": "O Metzi é um restaurante de cozinha contemporânea que investiga o diálogo entre México e Brasil a partir de técnica, território e produto.",
+      "es": "Metzi es un restaurante de cocina contemporánea que explora el diálogo entre México y Brasil a partir de la técnica, el territorio y el producto."
+    },
+    "tags": []
   }
 ]
