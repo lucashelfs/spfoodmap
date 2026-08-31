@@ -9,21 +9,21 @@ const SUPPORTED_LANGS = ["pt", "en", "es"];
 
 const STRINGS = {
   en: {
-    title: "São Paulo Food Map",
+    title: "World Food Map of São Paulo",
     subtitle: "Click a country to see restaurants in São Paulo serving that cuisine.",
     hint: "Click a highlighted country on the map.",
     empty: "No restaurants curated for this country yet.",
     loadError: "Failed to load map data",
   },
   pt: {
-    title: "Mapa Gastronômico de São Paulo",
+    title: "Mapa Mundi da Gastronomia em São Paulo",
     subtitle: "Clique em um país para ver restaurantes em São Paulo com aquela culinária.",
     hint: "Clique em um país destacado no mapa.",
     empty: "Nenhum restaurante cadastrado para este país ainda.",
     loadError: "Falha ao carregar os dados do mapa",
   },
   es: {
-    title: "Mapa Gastronómico de São Paulo",
+    title: "Mapa Mundial de la Gastronomía en São Paulo",
     subtitle: "Haz clic en un país para ver restaurantes en São Paulo con esa cocina.",
     hint: "Haz clic en un país destacado en el mapa.",
     empty: "Todavía no hay restaurantes para este país.",
