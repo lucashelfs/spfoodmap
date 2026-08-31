@@ -1,47 +1,5 @@
 [
   {
-    "id": "sakagura",
-    "name": "Sakagura",
-    "countryCode": "JP",
-    "cuisine": "Japanese",
-    "neighborhood": "Liberdade",
-    "address": "R. Tomas Gonzaga, 105 - Liberdade, São Paulo",
-    "notes": {
-      "en": "Izakaya-style, good sake list.",
-      "pt": "Estilo izakaya, boa carta de sakês.",
-      "es": "Estilo izakaya, buena carta de sake."
-    },
-    "tags": ["izakaya"]
-  },
-  {
-    "id": "santo-gourmet",
-    "name": "Santo Grão",
-    "countryCode": "BR",
-    "cuisine": "Brazilian",
-    "neighborhood": "Jardins",
-    "address": "R. Oscar Freire, 413 - Jardins, São Paulo",
-    "notes": {
-      "en": "Placeholder entry, replace with a real curated pick.",
-      "pt": "Entrada de exemplo, substituir por uma recomendação real.",
-      "es": "Entrada de ejemplo, reemplazar por una recomendación real."
-    },
-    "tags": []
-  },
-  {
-    "id": "trattoria-placeholder",
-    "name": "Trattoria Placeholder",
-    "countryCode": "IT",
-    "cuisine": "Italian",
-    "neighborhood": "Bela Vista",
-    "address": "TBD",
-    "notes": {
-      "en": "Placeholder entry, replace with a real curated pick.",
-      "pt": "Entrada de exemplo, substituir por uma recomendação real.",
-      "es": "Entrada de ejemplo, reemplazar por una recomendación real."
-    },
-    "tags": []
-  },
-  {
     "id": "metzi",
     "name": "Metzi",
     "countryCode": "MX",
@@ -68,5 +26,19 @@
       "es": "Izakaya inaugurado en 2023. Buenas porciones, una buena opción de almuerzo en la zona, precio justo por lo que se sirve."
     },
     "tags": ["izakaya"]
+  },
+  {
+    "id": "ping-yang-thai-bar-food",
+    "name": "Ping Yang Thai Bar & Food",
+    "countryCode": "TH",
+    "cuisine": "Thai",
+    "neighborhood": "Cerqueira César",
+    "address": "R. Dr. Melo Alves, 767 - Cerqueira César, São Paulo - SP, 01417-010",
+    "notes": {
+      "en": "Traditional and modern Thai cuisine, free of stereotypes.",
+      "pt": "Cozinha tailandesa tradicional e moderna, livre de estereótipos.",
+      "es": "Cocina tailandesa tradicional y moderna, libre de estereotipos."
+    },
+    "tags": ["thai"]
   }
 ]
