@@ -54,5 +54,19 @@
       "es": "Metzi es un restaurante de cocina contemporánea que explora el diálogo entre México y Brasil a partir de la técnica, el territorio y el producto."
     },
     "tags": ["product-driven", "contemporary"]
+  },
+  {
+    "id": "otoshi-izakaya",
+    "name": "Otoshi Izakaya",
+    "countryCode": "JP",
+    "cuisine": "Japanese",
+    "neighborhood": "Pinheiros",
+    "address": "R. Padre Carvalho, 335 - Pinheiros, São Paulo - SP, 05427-100",
+    "notes": {
+      "en": "Izakaya opened in 2023. Good portions, a solid lunch option in the area, fair price for what's served.",
+      "pt": "Izakaya aberto em 2023. Boas porções, boa opção de almoço na região, preço justo pelo que é servido.",
+      "es": "Izakaya inaugurado en 2023. Buenas porciones, una buena opción de almuerzo en la zona, precio justo por lo que se sirve."
+    },
+    "tags": ["izakaya"]
   }
 ]
